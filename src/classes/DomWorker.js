@@ -325,7 +325,7 @@ class DomWorker {
                 const authorContainer = document.createElement('div');
                 authorContainer.classList.add('line-info-container');
                 const authorIcon = document.createElement('img');
-                authorIcon.setAttribute('src', '/dist/author.png');
+                authorIcon.setAttribute('src', './dist/author.png');
                 const author = document.createElement('h3');
                 author.innerHTML = `${video.author}`;
                 authorContainer.appendChild(authorIcon);
@@ -334,7 +334,7 @@ class DomWorker {
                 const dateContainer = document.createElement('div');
                 dateContainer.classList.add('line-info-container');
                 const dateIcon = document.createElement('img');
-                dateIcon.setAttribute('src', '/dist/assets/calendar.png');
+                dateIcon.setAttribute('src', './dist/assets/calendar.png');
                 const date = document.createElement('h3');
                 date.innerHTML = `${video.publicationDate}`;
                 dateContainer.appendChild(dateIcon);
@@ -344,7 +344,7 @@ class DomWorker {
                 const viewsContainer = document.createElement('div');
                 viewsContainer.classList.add('line-info-container');
                 const viewsIcon = document.createElement('img');
-                viewsIcon.setAttribute('src', '/dist/assets/views.png');
+                viewsIcon.setAttribute('src', './dist/assets/views.png');
                 const viewsRate = document.createElement('h3');
                 viewsRate.innerHTML = `${video.viewCount}`;
                 viewsContainer.appendChild(viewsIcon);
