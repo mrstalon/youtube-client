@@ -21,13 +21,20 @@ module.exports = {
                 loader: 'style-loader!css-loader!sass-loader',
             },
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [{
+                test: /\.(png|jpe?g|gif)(\?.*)?$/,
+                use: {
                     loader: 'file-loader',
                     options: {
                         name: '[name].[ext]',
+                        outputPath: 'static/img/',
                     },
-                }],
+                },
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf)$/,
+                use: {
+                    loader: 'url-loader',
+                },
             },
         ],
     },
