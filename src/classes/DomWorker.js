@@ -334,7 +334,7 @@ class DomWorker {
                 const dateContainer = document.createElement('div');
                 dateContainer.classList.add('line-info-container');
                 const dateIcon = document.createElement('img');
-                dateIcon.setAttribute('src', './dist/assets/calendar.png');
+                dateIcon.setAttribute('src', './dist/calendar.png');
                 const date = document.createElement('h3');
                 date.innerHTML = `${video.publicationDate}`;
                 dateContainer.appendChild(dateIcon);
@@ -344,7 +344,7 @@ class DomWorker {
                 const viewsContainer = document.createElement('div');
                 viewsContainer.classList.add('line-info-container');
                 const viewsIcon = document.createElement('img');
-                viewsIcon.setAttribute('src', './dist/assets/views.png');
+                viewsIcon.setAttribute('src', './dist/views.png');
                 const viewsRate = document.createElement('h3');
                 viewsRate.innerHTML = `${video.viewCount}`;
                 viewsContainer.appendChild(viewsIcon);
