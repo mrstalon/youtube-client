@@ -27,8 +27,7 @@ class DomWorker {
     initializeVideoSearchEvents() {
         const input = document.getElementById('search-bar');
         const searchButton = document.getElementById('search-button');
-
-        searchButton.addEventListener('click', () => {
+        const getVideosAccordingToSearchQuery = () => {
             if (this.isRequesting) {
                 return;
             }
@@ -45,7 +44,20 @@ class DomWorker {
                     this.isRequesting = false;
                 });
             this.clearVideosContainerState();
+        };
+
+        window.addEventListener('keypress', (e) => {
+            const enterKeyCode = 13;
+
+            if (e.charCode === enterKeyCode) {
+                getVideosAccordingToSearchQuery();
+            }
         });
+
+        searchButton.addEventListener('click', () => {
+            getVideosAccordingToSearchQuery();
+        });
+
         this.initializeDomEvents();
     }
 
